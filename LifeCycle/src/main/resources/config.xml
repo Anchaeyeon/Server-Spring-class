@@ -4,4 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="t1" class="kr.hs.study.beans.TestBean" init-method="initMethod"/>
+    <bean id="t2" class="kr.hs.study.beans.TestBean" destroy-method="destroyMethod"/>
 </beans>
