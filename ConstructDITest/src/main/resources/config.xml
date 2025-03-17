@@ -4,4 +4,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="o1" class="kr.hs.study.beans.Owner">
+        <constructor-arg value="kiki"/>
+        <constructor-arg value="서울"/>
+    </bean>
+    <bean id="c1" class="kr.hs.study.beans.Cat">
+        <constructor-arg value="brown"/>
+        <constructor-arg value="4"/>
+        <constructor-arg ref="o1"/>
+    </bean>
+
+    <bean id="o2" class="kr.hs.study.beans.Owner">
+        <constructor-arg value="kuku"/>
+        <constructor-arg value="부산"/>
+    </bean>
+    <bean id="d1" class="kr.hs.study.beans.Dog">
+        <constructor-arg value="white"/>
+        <constructor-arg value="4"/>
+        <constructor-arg ref="o2"/>
+    </bean>
 </beans>
