@@ -11,9 +11,20 @@
         <property name="data4" value="kim"/>
     </bean>
 
+    <!--1번째 방법-->
     <bean id="d1" class="kr.hs.study.beans.DataBean2"/>
     <bean id="t2" class="kr.hs.study.beans.TestBean2">
         <property name="data1" ref="d1"/>
         <property name="data2" ref="d1"/>
+    </bean>
+
+    <!--2번째 방법-->
+    <bean id="t2" class="kr.hs.study.beans.TestBean2">
+        <property name="data1" >
+            <bean class="kr.hs.study.beans.DataBean2"/>
+        </property>
+        <property name="data2" >
+            <bean class="kr.hs.study.beans.DataBean2"/>
+        </property>
     </bean>
 </beans>
